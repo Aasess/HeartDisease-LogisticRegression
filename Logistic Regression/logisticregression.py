@@ -48,8 +48,8 @@ confusion_matrix = pd.crosstab(y_df["actual"],y_df["predicted"])
 classification_report_result = classification_report(y_valid,ypredicts)
 
 result ={
-    'model_accuracy' : accuracy,
-    'model_CV_accuracy': accuracyCV,
+    'model_accuracy' : str(round(accuracy*100,3)) +'%',
+    'model_CV_accuracy': str(round(accuracyCV*100,3)) +'%',
     'confusion_matrix' : confusion_matrix,
     'classification_report': classification_report_result
 }
